@@ -221,9 +221,6 @@ app.use(helmet({
   dnsPrefetchControl: false // disable
 }));
 
-// Information Security with HelmetJS - Understand BCrypt Hashes
-const bcrypt = require('bcrypt');
-
 // ---- DO NOT EDIT BELOW THIS LINE ---------------------------------------
 
 module.exports = app;
