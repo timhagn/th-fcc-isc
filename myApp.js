@@ -113,7 +113,7 @@ app.use(helmet.ieNoOpen());
 // set the field `force` to `true` in the config object. To not alter hyperdev security 
 // policy we will intercept and restore the header, after inspecting it for testing.
 
-var ninetyDaysInMilliseconds = 90*24*60*60*1000;
+const ninetyDaysInMilliseconds = 90*24*60*60*1000;
 app.use(helmet.hsts({
   maxAge: ninetyDaysInMilliseconds
 }));
