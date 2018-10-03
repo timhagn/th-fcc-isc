@@ -7,3 +7,4 @@ gen
 # npm
 node_modules
 .env
+yarn-error.log
