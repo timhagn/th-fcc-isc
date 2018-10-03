@@ -176,7 +176,12 @@ app.use(helmet.noCache());
 // **Hint**: 
 // in the `"'self'"` keyword, the single quotes are part of the keyword itself, 
 // so it needs to be enclosed in **double quotes** to be working.
-
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", 'trusted-cdn.com']
+  }
+}));
 
 
 /** TIP: */ 
@@ -203,6 +208,8 @@ app.use(helmet.noCache());
 // We introduced each middleware separately, for teaching purpose, and for
 // ease of testing. Using the 'parent' `helmet()` middleware is easiest, and
 // cleaner, for a real project.
+
+
 
 // ---- DO NOT EDIT BELOW THIS LINE ---------------------------------------
 
